@@ -23,14 +23,10 @@ body {
 #header {
 	/*background:url("http://www.newamerica.net/sites/all/themes/nafbase/css/images/logo.png") no-repeat left center;*/
 	color:#f4f4f4;
-	width:100%;
 	float:left;
   height:150px;
   width:100%; 
   color:#f4f4f4;
-  position:absolute;
-  bottom:0px;
-  left:0px;
   background:#0D253F;
   background:-moz-linear-gradient(top, #163e69  0%, #0D253F 100%);
   background:-webkit-gradient(linear, left top, left bottom, from(#163e69), to(#0D253F));

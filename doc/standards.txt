@@ -1,1 +1,8 @@
 Minimum fields needed are lat/long, original source, service type, service name (...)
+
+Required fields:
+- Address
+- Lat/Long
+- Service type (self-classification)
+- Original source
+- Extras (add as necessary)

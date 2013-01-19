@@ -1,5 +1,6 @@
 import csv
-# example usage: output_to_csv("/public-services-map/data/OaklandUnifiedSchools.csv","/public-services-map/data/output.csv", indices = [1, 2, 3])
+# example usage: 
+# output_to_csv("/public-services-map/data/OaklandUnifiedSchools.csv","/public-services-map/data/output.csv", indices = [1, 2, 3])
 
 def clean(string):
 	return string.strip("\"")

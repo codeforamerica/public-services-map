@@ -9,12 +9,34 @@
 <script type="text/javascript" src="js/modestmaps.min.js"></script>
 <script type="text/javascript" src="js/wax.mm.min.js"></script>
 <script type="text/javascript">
-newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-pi.jsonp', 'container');
+newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-pi.jsonp', 'mainMap');
 
 </script>
 </head>
 <body>
 <h1>The map</h1>
-<div id="container" style="width: 600px; height: 250px; margin: 0 auto"></div>
+<!-- <div id="container" style="width: 600px; height: 250px; margin: 0 auto"></div> -->
+
+<div id="main" class="layout-inner">
+      <div id="header">
+      </div>
+      <div id="mainMap" class="map"></div>
+      <a href='#' class='share'>Share +</a>
+      <div class='wax-share' style='display:none;'>
+          <div class='share-content'>
+            <h3>Share this map</h3>
+            <strong>Get the embed code</strong><br><small>Copy and paste this HTML into your website or blog.</small>
+            <div id='embed-code-field'><textarea id='embed-code' rows='4' readonly></textarea>
+            </div>
+            <a href='#' class='close'>Close</a>
+          </div>
+        </div>
+      <div id="infoBox" class="infoBar">
+         <div class="mainLegend">
+               <div class="intro" style="position:absolute;"><p>Text</p></div>
+            <div id="chartContainer" style="width: 50%; height: 130px; margin: 10px;float:right;"></div>
+         </div>
+      </div>
+   </div>
 </body>
 </html>

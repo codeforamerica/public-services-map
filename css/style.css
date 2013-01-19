@@ -23,7 +23,7 @@ body {
 #header {
   	height: 60px;
   	margin: 0 10px;
-	background:url("http://www.newamerica.net/sites/all/themes/nafbase/images/logo.png") no-repeat left center;
+	/*background:url("http://www.newamerica.net/sites/all/themes/nafbase/images/logo.png") no-repeat left center;*/
 	color:#f4f4f4;
 	width:100%;
 	float:left;

@@ -6,7 +6,7 @@ Visualizing public goods and services in cities based on pivot points, either co
 ## You can contribute:
 * Documentation
 * Data sets that adhere to our [data set standards] [standards]
-Visualization templates
+* Visualization templates
 
 [standards]: https://github.com/codeforamerica/public-services-map/tree/master/doc/standards.txt
 ## Installation:

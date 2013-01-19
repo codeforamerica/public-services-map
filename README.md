@@ -6,9 +6,9 @@ Visualizing public goods and services in cities based on pivot points, either co
 Minimum fields needed are lat/long, original source, service type, service name (...)
 
 ## Contribute:
-	Documentation
-	Data sets that adhere to our data set standards
-	Visualization templates
+Documentation
+Data sets that adhere to our data set standards
+Visualization templates
 
 ## Installation:
 	git clone https://github.com/codeforamerica/public-services-map.git

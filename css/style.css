@@ -15,7 +15,7 @@ body {
   height:100%;
   text-align: left;
   position: relative;
-  /*background: url("http://naflite.newamerica.net/sites/all/themes/naflite/images/naflite_back.png") repeat-y center #0D253F;*/
+  /*background: url("http://naflite.newamerica.net/sites/all/themes/naflite/css/images/naflite_back.png") repeat-y center #0D253F;*/
 	background:#0D253F;
 	background:-moz-linear-gradient(top, #0D253F 100%, #163e69  0%);
 	background:-webkit-gradient(linear, left top, left bottom, from(#0D253F	), to(#163e69));
@@ -23,7 +23,7 @@ body {
 #header {
   	height: 60px;
   	margin: 0 10px;
-	/*background:url("http://www.newamerica.net/sites/all/themes/nafbase/images/logo.png") no-repeat left center;*/
+	/*background:url("http://www.newamerica.net/sites/all/themes/nafbase/css/images/logo.png") no-repeat left center;*/
 	color:#f4f4f4;
 	width:100%;
 	float:left;
@@ -86,7 +86,7 @@ a.external {
   font-weight: bold;
   font-size: 10px;
   line-height: 15px;
-  background:url(/images/sprite_base.png) no-repeat -490px -26px;
+  background:url(/css/images/sprite_base.png) no-repeat -490px -26px;
   }
 a.flright {
   float: right;
@@ -139,7 +139,7 @@ text-shadow: 3px 3px 2px #000000;
   height: 30px;
   }
 #masthead a#newamerica {
-  background: transparent url(/images/sprite_base.png) no-repeat 0 0;
+  background: transparent url(/css/images/sprite_base.png) no-repeat 0 0;
   float: left;
   margin-top: 5px;
   display: block;
@@ -191,7 +191,7 @@ box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
   }
 
 a.zoomin {
-	background:#fff url(../images/zoom-in.png) -31px -1px no-repeat;
+	background:#fff url(../css/images/zoom-in.png) -31px -1px no-repeat;
 /*  background-position:-31px -1px;*/
   left:45px;
   border-radius:0px 3px 3px 0px;
@@ -201,7 +201,7 @@ a.zoomin {
 
 a.zoomout {
 	left:13px;
-	background:#fff url(../images/zoom-out.png) -61px -1px no-repeat;
+	background:#fff url(../css/images/zoom-out.png) -61px -1px no-repeat;
 /*  background-position:-61px -1px;*/
   border-radius:3px 0px 0px 3px;
   -moz-border-radius:3px 0px 0px 3px;
@@ -266,7 +266,7 @@ a.zoomout {
   position:absolute;
   top:0px;
   right:0px;
-	background:#fff url(../images/popup-close.png) no-repeat;
+	background:#fff url(../css/images/popup-close.png) no-repeat;
   }
 
 .wax-mobile-body .wax-tooltip {
@@ -302,7 +302,7 @@ a.zoomout {
     position:absolute;
     top:0px;
 	right:0px;
-	background:transparent url(../images/close.png) no-repeat;
+	background:transparent url(../css/images/close.png) no-repeat;
 }
 
 

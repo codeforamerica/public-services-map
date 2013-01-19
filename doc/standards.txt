@@ -1,0 +1,1 @@
+Minimum fields needed are lat/long, original source, service type, service name (...)

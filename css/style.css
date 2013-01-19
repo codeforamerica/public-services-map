@@ -36,6 +36,10 @@ body {
   background: #333;
   height: 200px;
   }
+#sidebar {
+  float: left;
+  width: 30%;
+}
 
 /* --------------------------
   Typography
@@ -170,10 +174,8 @@ a.close:active {
   Map
 ----------------------------- */
 .map {
-	position:absolute;
-	top:60px;
-	bottom:150px;
-	width:100%;
+	width:70%;
+  float: left;
 }
 a.zoomer {
   text-decoration:none;

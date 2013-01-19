@@ -22,15 +22,19 @@ body {
   }
 #header {
 	/*background:url("http://www.newamerica.net/sites/all/themes/nafbase/css/images/logo.png") no-repeat left center;*/
-	color:#f4f4f4;
 	float:left;
-  height:150px;
+	padding-left:5%;
+  height:10%;
   width:100%; 
-  color:#f4f4f4;
-  background:#0D253F;
-  background:-moz-linear-gradient(top, #163e69  0%, #0D253F 100%);
-  background:-webkit-gradient(linear, left top, left bottom, from(#163e69), to(#0D253F));
+  color:#fff;
+  background:#364a86;
+ /*background:-moz-linear-gradient(top, #394d8a  0%, #364a86 100%);
+  background:-webkit-gradient(linear, left top, left bottom, from(#394d8a), to(#364a86));*/
   }
+  
+  #subheader {
+padding: 100,100,100,100;	
+}
 #footer {
   margin-top: 40px;
   background: #333;
@@ -47,15 +51,16 @@ body {
 h1,h2,h3,h4,h5,h6 {
   font-weight: normal;
   margin: 0;
+  font-family:Arial, Helvetica, sans-serif;
   }
 h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover{
-  text-decoration: none;
+  text-decoration: none; font-family:Arial, Helvetica, sans-serif;
   }
 h1 { font-size: 28px; line-height: 30px; margin: 15px 0; }
 h2 { font-size: 24px; line-height: 26px; margin: 10px 0; }
-h3 { font-size: 22px; line-height: 24px; margin: 10px 0; }
+h3 { font-size: 36px; line-height: 24px; margin: 10px 0; }
 h4 { font-size: 14px; line-height: 18px; margin: 15px 0; }
-h5 { font-size: 13px; line-height: 16px; margin: 10px 0; }
+h5 { font-size: 18px; line-height: 16px; margin: 10px 0; }
 h4.list-title {
   background:#f4f4f4;
   padding: 5px 10px;
@@ -136,6 +141,7 @@ position:relative;
 left: -20px;
 text-shadow: 3px 3px 2px #000000;	
 }
+
 
 
 /* --------------------------

@@ -5,6 +5,9 @@ body {
 	margin: 0px;
 	overflow: hidden;
   }
+  h4 {
+    color: #000;
+  }
 
 /* --------------------------
   Layout

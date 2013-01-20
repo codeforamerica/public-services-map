@@ -425,8 +425,8 @@ a.close:active {
 a.share {
   position:absolute;
   display:block;
-  left:13px;
-  top:102px;
+  left:10px;
+  top:40px;
   width:61px;
   height:20px;
   font:bold 10px/20px Arial,sans-serif;

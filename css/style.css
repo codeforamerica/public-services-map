@@ -47,6 +47,11 @@ padding: 100,100,100,100;
   width: 30%;
 }
 
+#inputbar {
+	padding-left: 25%;
+	padding-top: 10%;
+}
+
 /* --------------------------
   Typography
 ----------------------------- */
@@ -148,7 +153,13 @@ left: -20px;
 text-shadow: 3px 3px 2px #000000;	
 }
 
+/* --------------------------
+  Sidebar
+-----------------------------
 
+#inputbar h6 {
+	padding-left: 25%;
+} */
 
 /* --------------------------
   Global Styles

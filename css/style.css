@@ -24,6 +24,8 @@ body {
 	/*background:url("http://www.newamerica.net/sites/all/themes/nafbase/css/images/logo.png") no-repeat left center;*/
 	float:left;
 	padding-left:5%;
+	padding-top: 1%;
+	padding-bottom: 1%;
   height:10%;
   width:100%; 
   color:#fff;
@@ -48,6 +50,9 @@ padding: 100,100,100,100;
 /* --------------------------
   Typography
 ----------------------------- */
+p {font-size: 14px; line-height: 18px; margin: 5px 0; font-family:Arial, Helvetica, sans-serif; color: #666;
+}
+
 h1,h2,h3,h4,h5,h6 {
   font-weight: normal;
   margin: 0;
@@ -60,7 +65,7 @@ h1 { font-size: 28px; line-height: 30px; margin: 15px 0; }
 h2 { font-size: 24px; line-height: 26px; margin: 10px 0; }
 h3 { font-size: 36px; line-height: 24px; margin: 10px 0; }
 h4 { font-size: 14px; line-height: 18px; margin: 15px 0; }
-h5 { font-size: 18px; line-height: 16px; margin: 10px 0; }
+h5 { font-size: 18px; line-height: 16px; margin: 10px 0; color: #91a1d1;}
 h4.list-title {
   background:#f4f4f4;
   padding: 5px 10px;
@@ -69,11 +74,12 @@ h4.list-title {
   }
 h6 {
   font-family: Arial,Helvetica,sans-serif;
-  text-transform: uppercase;
   font-weight: bold;
-  font-size: 10px;
+  font-size: 18px;
   line-height: 15px;
   margin: 10px 0;
+  color: #666;
+  
   }
 h1 a {
   color: #f4f4f4;
@@ -182,6 +188,8 @@ a.close:active {
 .map {
 	width:70%;
   float: left;
+  /*padding-left:2%;
+  padding-top: 2%; */
 }
 a.zoomer {
   text-decoration:none;

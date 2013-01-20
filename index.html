@@ -18,10 +18,17 @@ newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-pi.jsonp', 'mainMap');
       <div id="header"><h3>Social Services</h3>
       	<div id="subheader"><h5>Find relevant social services near you.</h5></div>
       </div>
-      <div id="sidebar">The sidebar</div>
-            <div id="mainMap" class="map" style="width: 800px; height: 350px; margin: 0 auto"></div>
+      <div id="sidebar">
+      	<div id="inputbar">
+        	<h6>Select location</h6>
+        </div>
+      	<div id="filters">
+        </div>
+
+      </div>
+      <div id="mainMap" class="map" style="width: 800px; height: 350px; margin: 0 auto">
       <a href='#' class='share'>Share +</a>
-      <div class='wax-share' style='display:none;'>
+      	<div class='wax-share' style='display:none;'>
           <div class='share-content'>
             <h3>Share this map</h3>
             <strong>Get the embed code</strong><br><small>Copy and paste this HTML into your website or blog.</small>
@@ -30,6 +37,7 @@ newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-pi.jsonp', 'mainMap');
             <a href='#' class='close'>Close</a>
           </div>
         </div>
-   </div>
+   	  </div>
+   
 </body>
 </html>

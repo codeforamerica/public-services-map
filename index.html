@@ -8,8 +8,11 @@
 <script type="text/javascript" src="js/map.js"></script>
 <script type="text/javascript" src="js/modestmaps.min.js"></script>
 <script type="text/javascript" src="js/wax.mm.min.js"></script>
+<script src='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.js'></script>
+  <link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.css' rel='stylesheet' />
 <script type="text/javascript">
-newWaxMap('http://tiles.mapbox.com/andyhull/map/map-u3mmbcus.json', 'mainMap');
+// newWaxMap('http://tiles.mapbox.com/andyhull/map/map-u3mmbcus.json', 'mainMap');
+mapbox.auto('map', 'andyhull.map-u3mmbcus');
 
 </script>
 </head>

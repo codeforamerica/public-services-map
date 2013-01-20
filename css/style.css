@@ -213,44 +213,6 @@ a.close:active {
   /*padding-left:2%;
   padding-top: 2%; */
 }
-a.zoomer {
-  text-decoration:none;
-  position:absolute;
-  background-color:#fff;
-  color:#444;
-  line-height:25px;
-  font-size:20px;
-  z-index:99999;
-  text-align:center;
-  width:28px;
-  height:28px;
-  top:10px;
-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
-  -moz-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
-  -webkit-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
-  border:1px solid #eee;
-  }
-
-a.zoomin {
-	background:#fff url(../css/images/zoom-in.png) -31px -1px no-repeat;
-/*  background-position:-31px -1px;*/
-  left:45px;
-  border-radius:0px 3px 3px 0px;
-  -moz-border-radius:0px 3px 3px 0px;
-  -webkit-border-radius:0px 3px 3px 0px;
-  }
-
-a.zoomout {
-	left:13px;
-	background:#fff url(../css/images/zoom-out.png) -61px -1px no-repeat;
-/*  background-position:-61px -1px;*/
-  border-radius:3px 0px 0px 3px;
-  -moz-border-radius:3px 0px 0px 3px;
-  -webkit-border-radius:3px 0px 0px 3px;
-  }
-  a.zoomdisabled {
-    background-color:#ccc;
-}
 
 .wax-legends {
 	position:absolute;

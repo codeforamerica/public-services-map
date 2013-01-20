@@ -165,10 +165,16 @@ text-shadow: 3px 3px 2px #000000;
 } */
 
 #inputbar {
-/*  padding-left: 25%;
-  padding-top: 10%;*/
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
 }
 
+#inputbar:focus{
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+}
 
 #filters {
 /*  padding-left: 25%;
@@ -177,6 +183,8 @@ text-shadow: 3px 3px 2px #000000;
 .filterCheck {
   float: left;
 }
+
+
 
 /* --------------------------
   Global Styles

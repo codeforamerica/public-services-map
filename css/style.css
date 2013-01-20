@@ -52,6 +52,11 @@ padding: 100,100,100,100;
 	padding-top: 10%;
 }
 
+#filters {
+	padding-left: 25%;
+	padding-top: 10%;
+}
+
 /* --------------------------
   Typography
 ----------------------------- */
@@ -196,9 +201,15 @@ a.close:active {
 /* --------------------------
   Map
 ----------------------------- */
+#mainMap {
+	border-width: 10px;
+	border-color: #394d8a;
+}
+
 .map {
 	width:70%;
   float: left;
+  
   /*padding-left:2%;
   padding-top: 2%; */
 }

@@ -164,13 +164,13 @@ text-shadow: 3px 3px 2px #000000;
 	padding-left: 25%;
 } */
 
-#inputbar {
+#inputbar select{
   font-size: 14px;
   font-weight: normal;
   line-height: 20px;
 }
 
-#inputbar:focus{
+#inputbar select:focus{
   border-color: rgba(82, 168, 236, 0.8);
   outline: 0;
   outline: thin dotted \9;

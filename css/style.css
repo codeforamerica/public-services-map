@@ -50,18 +50,11 @@ padding: 100,100,100,100;
   width: 30%;
 }
 
-#inputbar {
-	padding-left: 25%;
-	padding-top: 10%;
+#sidebar .blocks {
+  padding-left: 25%;
+  padding-top: 10%;
 }
 
-#filters {
-	padding-left: 25%;
-	padding-top: 10%;
-}
-.filterCheck {
-  float: left;
-}
 /* --------------------------
   Typography
 ----------------------------- */
@@ -170,6 +163,28 @@ text-shadow: 3px 3px 2px #000000;
 #inputbar h6 {
 	padding-left: 25%;
 } */
+
+#inputbar select{
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+#inputbar select:focus{
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+}
+
+#filters {
+/*  padding-left: 25%;
+  padding-top: 10%;*/
+}
+.filterCheck {
+  float: left;
+}
+
+
 
 /* --------------------------
   Global Styles

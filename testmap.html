@@ -31,34 +31,45 @@
 
     <script id="popup-template" type="text/x-handlebars-template">
 			<h3><a href='{{link}}'>{{name}}</a></h3>
-			<p>Est. {{established}}, {{borough}}</p>
-			<p>{{streetaddress}}</p>
-			<p>{{type}}</p>
+			<p>{{phone}}</p>
+			<p>{{address}}</p>
+			<p>{{hours}}</p>
     </script>
 
     <script type="text/javascript">
     	window.onload = function() { init() };
 
       var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?key=0Au5sflPsXEajdDhpdXRWdWFkdVBEejg0VGFKQ1pKdXc&output=html';
+
+      var ShelterIcon = L.Icon.extend({
+		    options: {
+		        shadowSize:   [50, 64], // size of the shadow
+				    shadowAnchor: [4, 62],
+				    // popupAnchor:  [100, 76] // point from which the popup should open relative to the iconAnch
+		    }
+		});
+
+      var blueIcon = new ShelterIcon({iconUrl: 'css/images/shelterBlue.png'}),
+	    purpleIcon = new ShelterIcon({iconUrl: 'css/images/shelterPurple.png'})
 			
       function init() {
-        Mapsheet( { key: public_spreadsheet_url,
+        var mainMap = Mapsheet( { key: public_spreadsheet_url,
 											element: "map",
 											popupTemplate: "popup-template",
 											provider: Mapsheet.Providers.Leaflet,
 											mapOptions: {
-												tilePath: 'http://a.tiles.mapbox.com/v3/andyhull.map-u3mmbcus/{z}/{x}/{y}.png',
-											}
-											// markerOptions: {
-											// 	iconUrl: 'http://leafletjs.com/docs/images/leaf-green.png',
-										 //    shadowUrl: 'http://leafletjs.com/docs/images/leaf-shadow.png',
+												tilePath: 'http://a.tiles.mapbox.com/v3/andyhull.map-ysnzhuup/{z}/{x}/{y}.png',
+											},
+											markerOptions: {
+												iconUrl: 'css/images/shelterBlue.png',
+										    // shadowSize:   [50, 64], // size of the shadow
+										    // iconAnchor:   [0, 0], // point of the icon which will correspond to marker's location
+										    // shadowAnchor: [4, 62],
+				    				  //   popupAnchor:  [0,0] // point from which the popup should open relative to the iconAnch
 
-										 //    shadowSize:   [50, 64], // size of the shadow
-										 //    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-										 //    shadowAnchor: [4, 62],  // the same for the shadow
-										 //    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-											// }
+											}
 									} );
+        // console.log(test.markerOptions);
       }
 
       document.write("The published spreadsheet is located at <a target='_new' href='" + public_spreadsheet_url + "'>" + public_spreadsheet_url + "</a>");        

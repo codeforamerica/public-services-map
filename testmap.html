@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.css" />
+	 <!--[if lte IE 8]>
+	     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.ie.css" />
+	 <![endif]-->
+	</head>
+  <body>
+	
+		<!--
+
+			This example uses:
+				Leaflet
+				Custom icons from spreadsheet
+				Handlebars templating for popups
+				markerOptions to set a ton of marker options
+
+		-->
+
+    <div id="map" style="height: 500px; width: 600px"></div>
+
+    <script type="text/javascript" src="js/tabletop.js"></script>
+    <script type="text/javascript" src="js/handlebars.js"></script>
+		<script src="http://cdn.leafletjs.com/leaflet-0.4.5/leaflet.js"></script>
+		<script src='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.js'></script>
+  <link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.css' rel='stylesheet' />
+
+    <script type="text/javascript" src="js/mapsheet.js"></script>
+
+
+    <script id="popup-template" type="text/x-handlebars-template">
+			<h3><a href='{{link}}'>{{name}}</a></h3>
+			<p>Est. {{established}}, {{borough}}</p>
+			<p>{{streetaddress}}</p>
+			<p>{{type}}</p>
+    </script>
+
+    <script type="text/javascript">
+    	window.onload = function() { init() };
+
+      var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?key=0Au5sflPsXEajdDhpdXRWdWFkdVBEejg0VGFKQ1pKdXc&output=html';
+			
+      function init() {
+        Mapsheet( { key: public_spreadsheet_url,
+											element: "map",
+											popupTemplate: "popup-template",
+											provider: Mapsheet.Providers.Leaflet,
+											mapOptions: {
+												tilePath: 'http://a.tiles.mapbox.com/v3/andyhull.map-u3mmbcus/{z}/{x}/{y}.png',
+											}
+											// markerOptions: {
+											// 	iconUrl: 'http://leafletjs.com/docs/images/leaf-green.png',
+										 //    shadowUrl: 'http://leafletjs.com/docs/images/leaf-shadow.png',
+
+										 //    shadowSize:   [50, 64], // size of the shadow
+										 //    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+										 //    shadowAnchor: [4, 62],  // the same for the shadow
+										 //    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+											// }
+									} );
+      }
+
+      document.write("The published spreadsheet is located at <a target='_new' href='" + public_spreadsheet_url + "'>" + public_spreadsheet_url + "</a>");        
+    </script>
+  </body>
+</html>

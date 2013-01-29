@@ -1,9 +1,9 @@
 body {
-  color: #333;
+  color: #fff;
 	width:100%;
 	height:100%;
 	margin: 0px;
-	overflow: hidden;
+	/*overflow: hidden;*/
   }
 
 /* --------------------------
@@ -12,7 +12,7 @@ body {
 .layout-inner,
 #main {
   width: 100%;
-  height:100%;
+  /*height:100%;*/
   text-align: left;
   position: relative;
   /*background: url("http://naflite.newamerica.net/sites/all/themes/naflite/images/naflite_back.png") repeat-y center #0D253F;*/
@@ -23,7 +23,7 @@ body {
 #header {
   	height: 60px;
   	margin: 0 10px;
-	background:url("http://www.newamerica.net/sites/all/themes/nafbase/images/logo.png") no-repeat left center;
+	/*background:url("http://www.newamerica.net/sites/all/themes/nafbase/images/logo.png") no-repeat left center;*/
 	color:#f4f4f4;
 	width:100%;
 	float:left;
@@ -323,7 +323,7 @@ a.zoomout {
 }
 
 #infoBox * {
-	overflow:hidden;
+	/*overflow:hidden;*/
 }
 
 .mainLegend{
@@ -491,4 +491,7 @@ a.share:active {
   border:1px solid #ccc;
   padding:4px;
   width:310px;
+  }
+  .leaflet-popup-content-wrapper {
+    color: #333;
   }

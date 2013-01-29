@@ -17,8 +17,18 @@
 				markerOptions to set a ton of marker options
 
 		-->
-
-    <div id="map" style="height: 500px; width: 600px"></div>
+<div id="main" class="layout-inner">
+      <div id="header"><h3>Social Services</h3>
+      	<div id="subheader"><h5>Find relevant social services near you.</h5></div>
+      </div>
+      <div id="sidebar">
+      	
+      	</div>
+    <div id="map" style="height: 500px; width: 100%"></div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/underscore.js"></script>
+    <script type="text/javascript" src="js/backbone.js"></script>
+    <script type="text/javascript" src="js/backbone.tabletopSync.js"></script>
 
     <script type="text/javascript" src="js/tabletop.js"></script>
     <script type="text/javascript" src="js/handlebars.js"></script>
@@ -27,24 +37,84 @@
   <link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.css' rel='stylesheet' />
 
     <script type="text/javascript" src="js/mapsheet.js"></script>
+    <link charset="utf-8" href="css/style.css" rel="stylesheet" type="text/css" />
 
 
     <script id="popup-template" type="text/x-handlebars-template">
-			<h3><a href='{{link}}'>{{name}}</a></h3>
+			<h3>{{name}}</h3>
 			<p>{{phone}}</p>
 			<p>{{address}}</p>
 			<p>{{hours}}</p>
     </script>
 
+    <div id="content"></div>
+    <div id="sidebar">
+    	<form class="sideForm">
+    		<input class="filterCheck" type="checkbox"><p class="filter-title" id="individual">Individual</p>
+<!--         <input class="filterCheck" type="checkbox"><p class="filter-title" id="languages">Languages spoken</p>
+        <input class="filterCheck" type="checkbox"><p class="filter-title" id="filter2">Accessibile</p>
+        <input class="filterCheck" type="checkbox"><p class="filter-title" id="filter2">No appointment needed</p> -->
+    	</form>
+    </div>
+
     <script type="text/javascript">
-    	window.onload = function() { init() };
 
       var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?key=0Au5sflPsXEajdDhpdXRWdWFkdVBEejg0VGFKQ1pKdXc&output=html';
 
+      /* 
+        You need to declare the tabletop instance separately, then feed it into the model/collection
+        You *must* specify wait: true so that it doesn't try to fetch when you initialize
+      */
+      var storage = Tabletop.init( { key: public_spreadsheet_url,
+                                      wait: true } )
+      /*
+       Need to specify that you'd like to sync using Backbone.tabletopSync
+       Can specify tabletop attributes, or you can do it on the collection
+      */
+      var Shelter = Backbone.Model.extend({
+        idAttribute: 'id',
+        defaults : {
+			    iconurl : null
+			  },
+        tabletop: {
+          instance: storage,
+          sheet: 'Sheet1'
+        },
+        sync: Backbone.tabletopSync
+      })
+
+      /*
+       Need to specify that you'd like to sync using Backbone.tabletopSync
+       Need to specify a tabletop key and sheet
+      */
+      var ShelterCollection = Backbone.Collection.extend({
+          // Reference to this collection's model.
+          model: Shelter,
+          tabletop: {
+            instance: storage,
+            sheet: 'Sheet1'
+          },
+          sync: Backbone.tabletopSync
+      });
+
+      var ShelterView = Backbone.View.extend({
+          tagname: 'div',
+          // template: _.template($('#popup-template').html()),
+           template: Handlebars.compile( $("#popup-template").html() ),
+
+           //render the view. loop through all the rows and append them to the handlebar template
+          render: function() {
+          	_.each(this.model.models, function (item) {
+            $(this.el).append(this.template(item.toJSON()));
+        }, this);
+            return this;
+          }
+      })
+
       var ShelterIcon = L.Icon.extend({
 		    options: {
-		        shadowSize:   [50, 64], // size of the shadow
-				    shadowAnchor: [4, 62],
+		      //   shadowSize:   [50, 64], // size of the shadow
+				    // shadowAnchor: [4, 62],
 				    // popupAnchor:  [100, 76] // point from which the popup should open relative to the iconAnch
 		    }
 		});
@@ -52,7 +122,7 @@
       var blueIcon = new ShelterIcon({iconUrl: 'css/images/shelterBlue.png'}),
 	    purpleIcon = new ShelterIcon({iconUrl: 'css/images/shelterPurple.png'})
 			
-      function init() {
+      function start() {
         var mainMap = Mapsheet( { key: public_spreadsheet_url,
 											element: "map",
 											popupTemplate: "popup-template",
@@ -61,16 +131,42 @@
 												tilePath: 'http://a.tiles.mapbox.com/v3/andyhull.map-ysnzhuup/{z}/{x}/{y}.png',
 											},
 											markerOptions: {
-												iconUrl: 'css/images/shelterBlue.png',
+												// iconUrl: 'css/images/shelterBlue.png',
 										    // shadowSize:   [50, 64], // size of the shadow
-										    // iconAnchor:   [0, 0], // point of the icon which will correspond to marker's location
+										    // iconAnchor:   [10, 40], // point of the icon which will correspond to marker's location
 										    // shadowAnchor: [4, 62],
-				    				  //   popupAnchor:  [0,0] // point from which the popup should open relative to the iconAnch
+				    				    // popupAnchor:  [1000,100] // point from which the popup should open relative to the iconAnch
 
 											}
 									} );
-        // console.log(test.markerOptions);
+        return mainMap
       }
+      $(document).ready( function() {
+         /*
+        You need to initialize Tabletop before you do aaaaanything.
+        You might think it'd be a good idea to put that into backbone.tabletopSync,
+          but IMHO the fact that you could put the key/url into any model anywhere
+          ever sounds like trouble.
+      */
+        var shelters = new ShelterCollection();
+        shelters.fetch({ success: showInfo });
+        var mapSheet = start()
+      });
+      
+      function showInfo(shelters) {
+      	shelters.each(function(shelter){
+      		if(shelter.get('type') == 'Individual'){
+	      		shelter.set("iconurl","css/images/shelterPurple.png")
+      		}
+      	})
+        
+        var bosco_view = new ShelterView({ model: shelters });
+        // console.log(shelters);
+
+        $("#content").append( bosco_view.render().el );
+
+      }
+      
 
       document.write("The published spreadsheet is located at <a target='_new' href='" + public_spreadsheet_url + "'>" + public_spreadsheet_url + "</a>");        
     </script>

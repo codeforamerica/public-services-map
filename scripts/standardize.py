@@ -6,7 +6,7 @@ import json
 # output_to_csv("/Users/richa/cfa/public-services-map/data/OaklandUnifiedSchools.csv","/Users/richa/cfa/public-services-map/data/output.csv", indices = [1, 3, 2], headers = ["type", "name", "address"])
 
 def clean(string):
-	return string.strip("\"")
+	return string.replace("'", '').replace('"', '').strip()
 
 def the_basics(data, indices = None, delimiter = ","):
 	data.next()

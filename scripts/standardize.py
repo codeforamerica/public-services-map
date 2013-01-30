@@ -11,14 +11,17 @@ def clean(string):
 def the_basics(data, indices = None, delimiter = ","):
 	data.next()
 	for row in data:
-		basics = []
-		row = row.split(delimiter)
-		if indices:
-			for index in indices:
-				basics.append(clean(row[index]))
-		else: # Get first column
-			basics.append(clean(row[0]))
-		yield basics
+		try:
+			basics = []
+			row = row.split(delimiter)
+			if indices:
+				for index in indices:
+					basics.append(clean(row[index]))
+			else: # Get first column
+				basics.append(clean(row[0]))
+			yield basics
+		except:
+			pass
 
 def output_to_csv(file_in, file_out, indices = None, headers = None):
 	outfile = csv.writer(open(file_out, "w"))

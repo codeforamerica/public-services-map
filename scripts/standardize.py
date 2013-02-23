@@ -8,6 +8,22 @@ import json
 def clean(string):
 	return string.replace("'", '').replace('"', '').strip()
 
+
+def convert_to_csv(file_out, json_file):
+	outfile = csv.writer(open(file_out, "w"))
+	# outfile.writerow(headers)
+	json_raw = open(json_file).readlines()
+	json_object = json.loads(json_raw[0])
+	for record in json_object:
+		strings = []
+		fields = []
+		for f in record:
+			fields.append(f)
+		for field in fields:
+			strings.append(record[field])
+		print strings
+		outfile.writerow(strings)
+
 def the_basics(data, indices = None, delimiter = ","):
 	data.next()
 	for row in data:

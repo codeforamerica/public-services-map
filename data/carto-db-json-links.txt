@@ -1,7 +1,0 @@
-city  data-set-type json-url  csv-url
-oakland libraries	'http://cfa.cartodb.com/api/v1/viz/17837/viz.json'  
-oakland streetLights	'http://cfa.cartodb.com/api/v1/viz/18125/viz.json'  https://cfa.cartodb.com/tables/18125/
-oakland schools	'http://cfa.cartodb.com/api/v1/viz/17822/viz.json'
-oakland parks	'http://cfa.cartodb.com/api/v1/viz/18178/viz.json'
-oakland trafficSignals	'http://cfa.cartodb.com/api/v1/viz/21699/viz.json'
-oakland see-click-fix 'http://cfa.cartodb.com/api/v1/viz/21762/viz.json'

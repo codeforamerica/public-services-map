@@ -1,0 +1,5 @@
+libraries	'http://cfa.cartodb.com/api/v1/viz/17837/viz.json';
+streetLights	'http://cfa.cartodb.com/api/v1/viz/18125/viz.json';
+schools	'http://cfa.cartodb.com/api/v1/viz/17822/viz.json';
+parks	'http://cfa.cartodb.com/api/v1/viz/18178/viz.json';
+trafficSignals	'http://cfa.cartodb.com/api/v1/viz/21699/viz.json';

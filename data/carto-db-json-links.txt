@@ -1,6 +1,7 @@
-libraries	'http://cfa.cartodb.com/api/v1/viz/17837/viz.json'
-streetLights	'http://cfa.cartodb.com/api/v1/viz/18125/viz.json'
-schools	'http://cfa.cartodb.com/api/v1/viz/17822/viz.json'
-parks	'http://cfa.cartodb.com/api/v1/viz/18178/viz.json'
-trafficSignals	'http://cfa.cartodb.com/api/v1/viz/21699/viz.json'
-see-click-fix 'http://cfa.cartodb.com/api/v1/viz/21762/viz.json'
+city  data-set-type json-url
+oakland libraries	'http://cfa.cartodb.com/api/v1/viz/17837/viz.json'
+oakland streetLights	'http://cfa.cartodb.com/api/v1/viz/18125/viz.json'
+oakland schools	'http://cfa.cartodb.com/api/v1/viz/17822/viz.json'
+oakland parks	'http://cfa.cartodb.com/api/v1/viz/18178/viz.json'
+oakland trafficSignals	'http://cfa.cartodb.com/api/v1/viz/21699/viz.json'
+oakland see-click-fix 'http://cfa.cartodb.com/api/v1/viz/21762/viz.json'

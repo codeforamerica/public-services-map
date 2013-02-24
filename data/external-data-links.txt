@@ -1,9 +1,9 @@
 city  data-set-type carto-db-api-json-url	raw-data	start-date	end-date
 oakland libraries	http://cfa.cartodb.com/api/v1/viz/17837/viz.json 
-oakland streetLights	http://cfa.cartodb.com/api/v1/viz/18125/viz.json  https://cfa.cartodb.com/tables/18125/
+oakland street-lights	http://cfa.cartodb.com/api/v1/viz/18125/viz.json  https://cfa.cartodb.com/tables/18125/
 oakland schools	http://cfa.cartodb.com/api/v1/viz/17822/viz.json
 oakland parks	http://cfa.cartodb.com/api/v1/viz/18178/viz.json
-oakland trafficSignals	http://cfa.cartodb.com/api/v1/viz/21699/viz.json
+oakland traffic-signals	http://cfa.cartodb.com/api/v1/viz/21699/viz.json
 oakland see-click-fix http://cfa.cartodb.com/api/v1/viz/21762/viz.json
-oakland	head-start-schools		https://www.google.com/fusiontables/data?docid=14ZHXZcZ3Fy4Qk0k3_cNV16N_Xl-n5GHy2kd8XEM#rows:id=1
+oakland	child-services		https://www.google.com/fusiontables/data?docid=14ZHXZcZ3Fy4Qk0k3_cNV16N_Xl-n5GHy2kd8XEM#rows:id=1
 oakland	crime-data	http://cfa.cartodb.com/api/v1/viz/21721/viz.json	https://cfa.cartodb.com/tables/21721	2007	2012
